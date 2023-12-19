@@ -17,10 +17,10 @@ terraform {
 #   }
 }
 
-provider "aws" {
-  region = var.aws_region
-  profile = "arch-class"
-}
+# provider "aws" {
+#   region = var.aws_region
+#   profile = "arch-class"
+# }
 
 locals {
   vpc_name     = "${var.env_name} ${var.vpc_name}"
