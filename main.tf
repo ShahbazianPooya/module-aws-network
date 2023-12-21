@@ -5,23 +5,7 @@ terraform {
       version = "~> 3.0"
     }
   }
-#   backend "s3" {
-    
-#     bucket         = "archclass-tf-state" 
-#     key            = "terraform/backend"
-#     region         = "eu-west-1"
-#     dynamodb_table = "terraform-state-locking"
-#     encrypt        = true
-#     profile = "arch-class"
-
-#   }
 }
-
-# provider "aws" {
-#   region = var.aws_region
-#   profile = "arch-class"
-# }
-
 locals {
   vpc_name     = "${var.env_name} ${var.vpc_name}"
   cluster_name = "${var.cluster_name}-${var.env_name}"
